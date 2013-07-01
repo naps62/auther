@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = 'An out-of-the-box authentication system based on Clearace and Omniauth'
   s.description = s.summary
 
-  s.files = Dir['{app,config,db,lib}/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  s.files = Dir['{app,config,db,lib}/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails', '~> 3.2.13'

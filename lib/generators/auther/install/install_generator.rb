@@ -9,15 +9,16 @@ module Auther
       source_root File.expand_path('../templates', __FILE__)
 
       def create_initializer
-        copy_file 'initializer.rb', 'config/initializer/auther.rb'
+        binding.pry
+        copy_file 'initializer.rb', 'config/initializers/auther.rb'
       end
 
-      def inject_into_application_controller
-        inject_into(
-          ApplicationController,
-          'app/controllers/application_controller.rb',
-          'include Auther::Controller'
-        )
+      def create_controller
+        if File.exists? 'app/controllers/application_controller.rb'
+          inject_into ApplicationController, 'app/controllers/application_controller.rb', 'include Auther::Controller'
+        else
+          copy_file 'application_controller.rb', 'app/controllers/application_controller.rb'
+        end
       end
 
       def create_models
@@ -35,7 +36,7 @@ module Auther
 
       def create_user_migration
         if users_table_exists?
-          create_add_columns_migration
+          create_add_user_columns_migration
         else
           create_migration 'create_users.rb'
         end
@@ -44,7 +45,7 @@ module Auther
       def display_readme_in_terminal
         readme 'README'
       end
-      
+
       private
 
       def create_add_user_columns_migration
