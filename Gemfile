@@ -2,6 +2,8 @@ source "http://rubygems.org"
 gemspec
 
 gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'guard'

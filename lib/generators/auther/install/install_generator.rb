@@ -9,7 +9,6 @@ module Auther
       source_root File.expand_path('../templates', __FILE__)
 
       def create_initializer
-        binding.pry
         copy_file 'initializer.rb', 'config/initializers/auther.rb'
       end
 

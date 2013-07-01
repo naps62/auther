@@ -48,6 +48,8 @@ GEM
     email_validator (1.4.0)
       activemodel
     erubis (2.7.0)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
     ffi (1.9.0)
     formatador (0.2.4)
     guard (1.8.1)
@@ -59,13 +61,17 @@ GEM
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
+    hashie (2.0.5)
     hike (1.2.3)
+    httpauth (0.2.0)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    jwt (0.1.8)
+      multi_json (>= 1.5)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -77,6 +83,21 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.7)
+    multipart-post (1.2.0)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -156,6 +177,8 @@ DEPENDENCIES
   guard
   guard-rspec
   jquery-rails
+  omniauth
+  omniauth-facebook
   pry-rails
   rspec-rails
   simplecov

@@ -7,3 +7,5 @@ bin/
 *~
 .rvmrc
 spec/dummy/log/*.log
+spec/dummy/config/accounts.yml
+
