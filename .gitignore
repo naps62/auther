@@ -5,3 +5,5 @@ db/*.sqlite3
 bin/
 .bundle
 *~
+.rvmrc
+spec/dummy/log/*.log
