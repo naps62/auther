@@ -22,11 +22,11 @@ module Auther
 
       def create_models
         if File.exists? 'app/models/user.rb'
-          inject_into User, 'app/models/user.rb', 'include Auther::User'
+          inject_into User, 'app/models/user.rb', 'include Auther::Model'
         else
-          copy_file 'user.rb', 'app/models/user.rb'
+          copy_file user_model_filename, 'app/models/user.rb'
         end
-        copy_file 'authorization.rb', 'app/models/authorization.rb'
+        copy_file authorization_model_filename, 'app/models/authorization.rb'
       end
 
       def create_authorization_migration
@@ -47,8 +47,28 @@ module Auther
 
       private
 
+      def user_model_filename
+        if is_rails4?
+          'user.rb'
+        else
+          'user_with_accessibles.rb'
+        end
+      end
+
+      def authorization_model_filename
+        if is_rails4?
+          'authorization.rb'
+        else
+          'authorization_with_accessibles.rb'
+        end
+      end
+
+
+      def is_rails4?
+        Rails::VERSION::MAJOR == 4
+      end
+
       def create_add_user_columns_migration
-        puts users_table_exists?
         if migration_needed?
           config = {
             new_columns: new_columns,

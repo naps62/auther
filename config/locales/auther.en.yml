@@ -1,0 +1,7 @@
+en:
+  auther:
+    flash:
+      notice:
+        sign_in: 'Signed in'
+      error:
+        sign_in: 'Error Signing in'

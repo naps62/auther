@@ -20,6 +20,10 @@
 <%= link_to 'Sign in', sign_in_path %><br />
 <%= link_to 'Sign out', sign_out_path, method: :delete %><br />
 
+<% Auther.providers.each do |provider| %>
+  <%= link_to "Sign in with #{provider}", autherize_path(provider) %>
+<% end %>
+
 <br />
 
 <%= yield %>

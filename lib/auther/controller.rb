@@ -3,5 +3,6 @@ module Auther
     extend ActiveSupport::Concern
 
     include Clearance::Controller
+    include Auther::Helpers
   end
 end
