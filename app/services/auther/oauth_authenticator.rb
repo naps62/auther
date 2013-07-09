@@ -9,7 +9,7 @@ module Auther
 
     def authenticate!
       find_by_autherization
-      find_by_email unless user
+      find_by_uid unless user
       create unless user
       return user
     end
@@ -23,9 +23,10 @@ module Auther
       @user = autherization.user if autherization
     end
 
-    def find_by_email
-      @user = User.find_by_email(@auth_data[:email])
-      user.autherizations.create(info) if user
+    def find_by_uid
+      autherization = Autherization.find_by_uid(@auth_data[:uid])
+      user = autherization.user if autherization
+      user.autherizations.create(@auth_data) if user
     end
 
     def create
