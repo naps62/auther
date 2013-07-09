@@ -16,7 +16,7 @@ module Auther
         { }
       end
 
-      def authorization
+      def autherization
         { }
       end
 
@@ -24,16 +24,16 @@ module Auther
         accessible_columns(::User, user)
       end
 
-      def full_authorization
-        accessible_columns(::Authorization, default_authorization.merge(authorization))
+      def full_autherization
+        accessible_columns(::Autherization, default_autherization.merge(autherization))
       end
 
-      def default_authorization
+      def default_autherization
         {
           provider: data.provider,
           uid:      data.uid,
           name:     data.info.name
-        }.merge(authorization)
+        }.merge(autherization)
       end
 
       protected

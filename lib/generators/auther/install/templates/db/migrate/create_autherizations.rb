@@ -1,6 +1,6 @@
-class CreateAuthorizations < ActiveRecord::Migration
+class CreateAutherizations < ActiveRecord::Migration
   def change
-    create_table :authorizations  do |t|
+    create_table :autherizations  do |t|
       t.references :user
       t.string :provider,   null: false
       t.string :uid,        null: false
@@ -9,6 +9,6 @@ class CreateAuthorizations < ActiveRecord::Migration
       t.timestamps :null => false
     end
 
-    add_index :authorizations, :uid
+    add_index :autherizations, :uid
   end
 end

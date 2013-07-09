@@ -1,4 +1,4 @@
-class Authorization < ActiveRecord::Base
+class Autherization < ActiveRecord::Base
   belongs_to :user
 
   attr_accessible :provider,
