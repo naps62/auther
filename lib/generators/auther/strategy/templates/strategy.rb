@@ -12,7 +12,7 @@ module Auther
         { }
       end
 
-      def autherization
+      def authorization
         { }
       end
 

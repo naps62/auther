@@ -21,7 +21,7 @@
 <%= link_to 'Sign out', sign_out_path, method: :delete %><br />
 
 <% Auther.providers.each do |provider| %>
-  <%= link_to "Sign in with #{provider}", autherize_path(provider) %>
+  <%= link_to "Sign in with #{provider}", auther_oauth_path(provider) %>
 <% end %>
 
 <br />

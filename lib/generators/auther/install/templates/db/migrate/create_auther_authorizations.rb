@@ -1,4 +1,4 @@
-class CreateAutherizations < ActiveRecord::Migration
+class CreateAutherAuthorizations < ActiveRecord::Migration
   def change
     create_table :auther_authorizations  do |t|
       t.references :user

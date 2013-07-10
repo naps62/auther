@@ -8,7 +8,7 @@ module Auther
     end
 
     def authenticate!
-      find_by_autherization
+      find_by_authorization
       find_by_uid unless user
       create unless user
       return user
@@ -16,29 +16,29 @@ module Auther
 
     private
 
-    attr_reader :autherization
+    attr_reader :authorization
 
-    def find_by_autherization
-      @autherization = Autherization.where(@auth_data.slice(:provider, :uid)).first
-      @user = autherization.user if autherization
+    def find_by_authorization
+      @authorization = Auther::Authorization.where(@auth_data.slice(:provider, :uid)).first
+      @user = authorization.user if authorization
     end
 
     def find_by_uid
-      autherization = Autherization.find_by_uid(@auth_data[:uid])
-      user = autherization.user if autherization
-      user.autherizations.create(@auth_data) if user
+      authorization = Autherization.find_by_uid(@auth_data[:uid])
+      user = authorization.user if autherization
+      user.authorizations.create(@auth_data) if user
     end
 
     def create
       @user = User.new @user_data
       user.password = generate_password
-      user.autherizations.build(@auth_data)
+      user.authorizations.build(@auth_data)
       user.save!
     end
 
     def set_info(data)
       strategy = Auther::Utils.strategy_name_to_class(data.provider).new(data)
-      @auth_data = strategy.full_autherization
+      @auth_data = strategy.full_authorization
       @user_data = strategy.full_user
     end
 

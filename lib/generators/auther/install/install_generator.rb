@@ -26,11 +26,11 @@ module Auther
         else
           copy_file user_model_filename, 'app/models/user.rb'
         end
-        copy_file autherization_model_filename, 'app/models/autherization.rb'
+        copy_file authorization_model_filename, 'app/models/auther/authorization.rb'
       end
 
-      def create_autherization_migration
-        create_migration 'create_autherizations.rb' # TODO check for name conflicts
+      def create_authorization_migration
+        create_migration 'create_auther_authorizations.rb' # TODO check for name conflicts
       end
 
       def create_user_migration
@@ -55,11 +55,11 @@ module Auther
         end
       end
 
-      def autherization_model_filename
+      def authorization_model_filename
         if is_rails4?
-          'autherization.rb'
+          'auther_authorization.rb'
         else
-          'autherization_with_accessibles.rb'
+          'auther_authorization_with_accessibles.rb'
         end
       end
 

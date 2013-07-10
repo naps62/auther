@@ -5,10 +5,10 @@ module Auther
     include Clearance::User
 
     included do
-      has_many :autherizations
+      has_many :auther_authorizations
 
       def email_optional?
-        autherizations.any?
+        authorizations.any?
       end
     end
   end
