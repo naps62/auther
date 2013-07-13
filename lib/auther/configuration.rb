@@ -25,7 +25,12 @@ module Auther
     private
 
     def reload_omniauth
-      @accounts = YAML.load_file(@accounts_file)['auther']
+      file = YAML.load_file(@accounts_file) if File.exists?(@accounts_file)
+      if file
+        @accounts = file['auther']
+      else
+        @accounts = {}
+      end
       @providers = (@accounts.keys + @extra_providers - @exclude_providers.map(&:to_s)).uniq
       @strategies = @providers.inject([]) do |strategies, provider|
         begin
