@@ -19,7 +19,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 3.2.13'
   s.add_dependency 'clearance', '1.0.0.rc7'
 
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'appraisal', '~> 0.5'
   s.add_development_dependency 'aruba'
+  s.add_development_dependency 'cucumber-rails'
+  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'cucumber'
 end
