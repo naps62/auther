@@ -74,7 +74,7 @@ module Auther
             new_columns: new_columns,
             new_indexes: new_indexes
           }
-          create_migration 'add_author_to_users.rb', config
+          create_migration 'add_auther_to_users.rb', config
         end
       end
 

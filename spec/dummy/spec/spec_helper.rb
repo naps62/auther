@@ -1,3 +1,12 @@
+require 'rubygems'
+require 'bundler/setup'
+
+require 'combustion'
+
+Combustion.initialize!
+
+require 'rspec/rails'
+
 #require 'simplecov'
 #SimpleCov.start 'rails'
 

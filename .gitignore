@@ -9,4 +9,5 @@ bin/
 spec/dummy/log/*.log
 spec/dummy/config/accounts.yml
 spec/dumyy/db/*.sqlite3
+*.sublime-project
 
