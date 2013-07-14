@@ -25,5 +25,5 @@ RSpec::Core::RakeTask.new(:spec)
 
 Cucumber::Rake::Task.new(:cucumber) do |t|
   t.fork = false
-  t.cucumber_opts = ['--format', (ENV['CUCUMBER_FORMAT'] || 'progress')]
+  t.cucumber_opts = ['--format', (ENV['CUCUMBER_FORMAT'] || 'pretty')]
 end
