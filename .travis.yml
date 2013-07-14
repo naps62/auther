@@ -5,7 +5,6 @@ rvm:
 env:
   - "RAILS_VERSION=3.2.13"
   - "RAILS_VERSION=3.1.12"
-  - "RAILS_VERSION=3.0.20"
   - "RAILS_VERSION=4.0.0"
   - "RAILS_VERSION=master"
 matrix:
