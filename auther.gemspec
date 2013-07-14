@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '>= 3.0'
   s.add_dependency 'clearance', '1.0.0.rc7'
+  s.add_dependency 'omniauth'
 
   s.add_development_dependency 'appraisal', '~> 0.5'
   s.add_development_dependency 'aruba'

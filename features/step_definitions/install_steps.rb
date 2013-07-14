@@ -62,3 +62,16 @@ When(/^I create a user migration with all auther fields$/) do
       """
   }
 end
+
+When(/^I create a simple user model$/) do
+  steps %Q{
+    When I write to "app/models/user.rb" with:
+    """
+    class User < ActiveRecord::Base
+      def original_user_method
+        "dummy"
+      end
+    end
+    """
+  }
+end
