@@ -11,14 +11,13 @@ require 'bundler/gem_tasks'
 require 'rake'
 require 'cucumber/rake/task'
 require 'rspec/core/rake_task'
-require 'appraisal'
 
 desc 'Default'
 task :default => [:all]
 
 desc 'Test the engine under all supported Rails versions'
-task :all => ['appraisal:install'] do |t|
-  exec 'rake appraisal spec cucumber'
+task :all do |t|
+  exec 'rake spec cucumber'
 end
 
 RSpec::Core::RakeTask.new(:spec)
