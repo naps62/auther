@@ -1,6 +1,9 @@
 Auther
 ======
 
+[![Build Status](https://travis-ci.org/naps62/auther.png?branch=master)](https://travis-ci.org/naps62/auther)
+[![Code Climate](https://codeclimate.com/github/naps62/auther.png)](https://codeclimate.com/github/naps62/auther)
+
 Easy authentication management based on Clearance and Omniauth
 
 Description
