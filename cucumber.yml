@@ -1,1 +1,1 @@
-default: -r features
+default: --drb -r features
