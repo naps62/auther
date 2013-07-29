@@ -2,7 +2,6 @@ Given(/^I have a project with auther$/) do
   steps %Q{
     Given I successfully run `rails new testapp --skip-bundle --skip-javascript --skip-sprockets`
     And I cd to "testapp"
-    And I remove the file "public/index.html"
     And I remove the file "app/views/layouts/application.html.erb"
     And I configure a root route
     And I add the "auther" gem to this project

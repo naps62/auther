@@ -7,6 +7,7 @@ bin/
 .bundle
 *~
 .rvmrc
+spec/dummy
 spec/dummy/log/*.log
 spec/dummy/config/accounts.yml
 spec/dumyy/db/*.sqlite3
