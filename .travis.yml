@@ -9,7 +9,6 @@ env:
   - "RAILS_VERSION=master"
 matrix:
   allow_failures:
-    - env: "RAILS_VERSION=4.0.0"
     - env: "RAILS_VERSION=master"
   exclude:
     - rvm: 2.0.0
