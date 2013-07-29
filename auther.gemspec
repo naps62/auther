@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails', '>= 3.0'
-  s.add_dependency 'clearance', '1.0.0.rc7'
+  s.add_dependency 'clearance', '1.0.0.rc8'
   s.add_dependency 'omniauth'
 
   s.add_development_dependency 'aruba'
